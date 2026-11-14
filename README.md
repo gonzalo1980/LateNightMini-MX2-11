@@ -19,9 +19,8 @@ Esta versión incluye los siguientes cambios y mejoras de usabilidad:
 
 ## 📸 Capturas de pantalla
 
-*(Puedes añadir aquí tus propias capturas subiéndolas al repositorio)*
-- Vista Compacta (Modo principal)
-- Doble rack de FX
+![Vista Compacta](screenshots/Skin-MX2-11.png)
+![Doble rack de FX](screenshots/Skin2-MX2-11.png)
 
 ## 📥 Instalación
 
