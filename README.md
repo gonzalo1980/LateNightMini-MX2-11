@@ -20,7 +20,7 @@ Esta versión incluye los siguientes cambios y mejoras de usabilidad:
 ## 📸 Capturas de pantalla
 
 ![Vista Compacta](screenshots/Skin-MX2-11.png)
-![Doble rack de FX](screenshots/Skin2-MX2-11.png)
+![Doble rack de FX](screenshots/Skin2-MX2-11.jpeg)
 
 ## 📥 Instalación
 
