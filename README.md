@@ -1,64 +1,52 @@
-# LateNightMini
+# LateNightMini-MX2-11
 
-LateNightMini is a (work in progress) Mixxx skin with a compact workflow for smaller touch displays.
-It is based on the default LateNight skin from main branch.
+**LateNightMini-MX2-11** es una versión modificada (fork) de la excelente skin [LateNightMini](https://github.com/ghztomash/LateNightMini) creada por Tomash GHz. 
 
-Requires Mixxx 2.6 or newer.
+Esta versión está especialmente adaptada para su uso en **pantallas táctiles de 11 pulgadas** (probada en resolución 1280x720) utilizando una tablet Android como segunda pantalla en Windows 11, y optimizada para ser utilizada junto a un controlador externo (como el Traktor Kontrol MX2 o similares), delegando la mezcla física al controlador y dejando la pantalla para disparar cues, efectos y visualizar las ondas.
 
-Its intended to be used with a MIDI controller like the DDJ-FLX4 and a [Raspberry Pi in stand alone mode](https://github.com/ghztomash/StandaloneMixxx).
+Requiere Mixxx 2.6 o superior.
 
-## Screenshots
+## 🛠️ Modificaciones realizadas respecto al original
 
-### PaleMoon
+Esta versión incluye los siguientes cambios y mejoras de usabilidad:
 
-![PaleMoon preview](./skin_preview_PaleMoon.png)
+- **Doble Rack de Efectos (FX1 + FX2):** Se ha añadido una segunda unidad de efectos completa apilada verticalmente debajo de la primera, permitiendo controlar dos efectos simultáneos sin salir de la vista principal.
+- **Botón de Ajuste de Beatgrid:** Se reemplazó el botón de bucle (Beatloop) en el área de la waveform por un botón dedicado a ajustar la cuadrícula de tempo (icono de 3 barras con exclamación). 
+  - *Clic izquierdo:* `beats_translate_curpos` (Alinea el golpe a la posición actual).
+  - *Clic derecho:* `beats_translate_match_alignment` (Alinea con el otro deck).
+- **Botones de Asignación FX Mejorados:** Se modificó el archivo `assign_buttons.xml` para que los botones de asignación de FX1 y FX2 en los decks tengan la misma apariencia, tamaño y peso visual, facilitando su uso táctil.
+- **Interfaz táctil (Tema PaleMoon):** Optimizado para botones más grandes y accesibles, reduciendo la dependencia del mouse.
 
-![PaleMoon library preview](./skin_preview_library.png)
+## 📸 Capturas de pantalla
 
-### Classic
+*(Puedes añadir aquí tus propias capturas subiéndolas al repositorio)*
+- Vista Compacta (Modo principal)
+- Doble rack de FX
 
-![Classic preview](./skin_preview_Classic.png)
+## 📥 Instalación
 
-## Features
+Para instalar esta skin, clona este repositorio directamente en la carpeta de skins de tu Mixxx:
 
-- Two-deck layout with size modes: full, compact, and mini
-- Optimized for small touch displays 760x440
-- Waveform overviews
-- Keylock and Quantize buttons
-- Conditional Preferences, Fullscreen, and Quit buttons when supported by Mixxx
-- Built-in themes: `PaleMoon` and `Classic`
+git clone https://github.com/gonzalo1980/LateNightMini-MX2-11.git ~/.mixxx/skins/LateNightMini-MX2-11
 
-## Installation
+Ubicaciones comunes:
 
-Clone this project into your Mixxx skins directory:
+- **Linux:** `~/.mixxx/skins/`
+- **Windows:** `%LOCALAPPDATA%\Mixxx\skins\`
+- **macOS:** `~/Library/Containers/org.mixxx.mixxx/Data/Library/Application Support/Mixxx/skins/`
 
-```sh
-git clone https://github.com/ghztomash/LateNightMini.git ~/.mixxx/skins/LateNightMini
-```
+Abre Mixxx, ve a **Preferencias > Interfaz** y selecciona **LateNightMini-MX2-11**.
 
-Common locations:
+## 👥 Créditos y Licencia
 
-- Linux: `~/.mixxx/skins/`
-- Windows: `%LOCALAPPDATA%\\Mixxx\\skins\\`
-- macOS: `~/Library/Containers/org.mixxx.mixxx/Data/Library/Application Support/Mixxx/skins/`
+- **Autor original:** Tomash GHz
+- **Modificaciones (Fork):** Gonzalo (2026)
+- **Basado en el trabajo de:** jus, Owen Williams, ronso0
 
-Then open Mixxx and select `LateNightMini` in `Preferences > Interface`.
+Esta skin se distribuye bajo la licencia CC-BY-SA 4.0 (Creative Commons Attribution-ShareAlike), al igual que el proyecto original. Eres libre de compartir y adaptar el material, siempre que des crédito a los autores y distribuyas tus contribuciones bajo la misma licencia.
 
-## Contributors
+## 🔗 Referencias
 
-- [Tomash GHz](https://github.com/ghztomash)
+- [Repositorio original LateNightMini](https://github.com/ghztomash/LateNightMini)
+- [Mixxx DJ Software](https://mixxx.org/)
 
-Based on the work of:
-
-- [jus](s.brandt@mixxx.org)
-- [Owen Williams](owilliams@mixxx.org)
-- [ronso0](ronso0@mixxx.org)
-
-## References
-
-For more inspiration, check out the amazing work of:
-
-- [Pioneered](https://github.com/timewasternl/Pioneered)
-- [XDJ100SX](https://github.com/marcmonka/XDJ100SX)
-- [Compact Skin for Raspberry Pi 10.1 touch display](https://mixxx.discourse.group/t/compact-skin-for-raspberry-pi-10-1-touch-display/28955)
-- [Mobile Deere Skin for 8” touch screen](https://mixxx.discourse.group/t/mobile-deere-skin-for-8-touch-screen/27917)
