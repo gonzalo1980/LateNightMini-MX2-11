@@ -29,34 +29,52 @@
             <Size>1min,2min</Size>
             </WidgetGroup>
 
-          <WidgetGroup>
+                    <WidgetGroup>
             <ObjectName>WaveformDeckInfoControls</ObjectName>
             <Layout>horizontal</Layout>
             <Size>94f,36f</Size>
             <Children>
-              <Template src="skin:/controls/button_2state_right_display.xml">
-                <SetVariable name="TooltipId">beatloop_activate</SetVariable>
-                <SetVariable name="ObjectName">LoopActivate</SetVariable>
-                <SetVariable name="Size">36f,36f</SetVariable>
-                <SetVariable name="BtnSize">square</SetVariable>
-                <SetVariable name="Align">center</SetVariable>
-                <SetVariable name="state_0_text"></SetVariable>
-                <SetVariable name="state_1_text"></SetVariable>
-                <SetVariable name="ConfigKey"><Variable name="Group"/>,beatloop_activate</SetVariable>
-                <SetVariable name="ConfigKeyRight"><Variable name="Group"/>,reloop_toggle</SetVariable>
-                <SetVariable name="ConfigKeyDisp"><Variable name="Group"/>,loop_enabled</SetVariable>
-              </Template>
+              
+              <!-- Espaciador Izquierdo -->
+              <WidgetGroup><SizePolicy>me,me</SizePolicy></WidgetGroup>
 
-              <Number>
-                <TooltipId>beatloop_size</TooltipId>
-                <ObjectName>WaveformLoopSizeLabel</ObjectName>
-                <Size>36f,26f</Size>
-                <Alignment>center</Alignment>
-                <NumberOfDigits>0</NumberOfDigits>
-                <Connection>
-                  <ConfigKey><Variable name="Group"/>,beatloop_size</ConfigKey>
-                </Connection>
-              </Number>
+              <!-- Contenedor de capas -->
+              <WidgetGroup>
+                <Layout>stacked</Layout>
+                <Size>36f,36f</Size>
+                <SizePolicy>min,min</SizePolicy>
+                <Children>
+                  
+                  <!-- CAPA 1: Botón nativo (Recibe los clics y dibuja el recuadro) -->
+                  <Template src="skin:/controls/button_2state_right.xml">
+                    <SetVariable name="TooltipId">beats_translate_curpos</SetVariable>
+                    <SetVariable name="ObjectName">BeatgridAdjustButton</SetVariable>
+                    <SetVariable name="Size">36f,36f</SetVariable>
+                    <SetVariable name="BtnSize">square</SetVariable>
+                    <SetVariable name="Align">center</SetVariable>
+                    <SetVariable name="state_0_text"></SetVariable>
+                    <SetVariable name="state_1_text"></SetVariable>
+                    <SetVariable name="ConfigKey"><Variable name="Group"/>,beats_translate_curpos</SetVariable>
+                    <SetVariable name="ConfigKeyRight"><Variable name="Group"/>,beats_translate_match_alignment</SetVariable>
+                  </Template>
+
+                  <!-- CAPA 2: El ícono (Usando background-image para que sí se dibuje) -->
+                  <WidgetGroup>
+                    <Size>36f,36f</Size>
+                    <Style>
+                      background-image: url(skin:/palemoon/buttons/btn_beatgrid_icon.svg);
+                      background-repeat: no-repeat;
+                      background-position: center center;
+                      border: none;
+                    </Style>
+                  </WidgetGroup>
+
+                </Children>
+              </WidgetGroup>
+              
+              <!-- Espaciador Derecho -->
+              <WidgetGroup><SizePolicy>me,me</SizePolicy></WidgetGroup>
+
             </Children>
           </WidgetGroup>
 
